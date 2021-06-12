@@ -67,7 +67,7 @@ function showPerson(person) {
 }
 
 
-nextBtn.addEventListener('click', () => {
+nextBtn.addEventListener("click", () => {
   currentItem++
   if (currentItem > reviews.length - 1) {
     currentItem = 0;
@@ -75,7 +75,7 @@ nextBtn.addEventListener('click', () => {
   showPerson(currentItem);
 })
 
-prevBtn.addEventListener('click', () => {
+prevBtn.addEventListener("click", () => {
   currentItem--
   if (currentItem < 0) {
     currentItem = reviews.length - 1;
@@ -84,3 +84,7 @@ prevBtn.addEventListener('click', () => {
 })
 
 // show
+randomBtn.addEventListener("click", () => {
+  currentItem = Math.floor(Math.random() * reviews.length);
+  showPerson(currentItem);
+});
